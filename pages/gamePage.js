@@ -1,4 +1,5 @@
 import swipeService from "./../services/swipeService.js"
+import SwiperService from "./../services/swipeService.js";
 // import AddQuestions from "./addQuestions.js"
 
 
@@ -14,8 +15,9 @@ export default class GamePage {
         // this.calcArrayLength();
 
         // Slider
-        this.swipeZone = document.getElementById('container');
-        this.swiper = swipeService.swiper;
+        // this.swipeZone = document.getElementById('container');
+        this.swiper = new SwiperService();
+        this.swiper.init("container");
         // slider end
 
 
@@ -45,7 +47,8 @@ export default class GamePage {
         <p>${this.curRule}</p></section>
 
         <div id="container">
-      
+      <img src="https://cederdorff.com/img/cphcloud_web.jpg">
+      <img src="https://cederdorff.com/img/cphcloud_web.jpg">
     
         </div>
         
