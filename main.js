@@ -54,5 +54,6 @@ window.addContentToPartyArr = () => addQuestions.addContentToPartyArr();
 window.checkbox = (id, question) => addQuestions.checkbox(id, question);
 window.getThePartyId = () => settingsPage.getThePartyId();
 window.basket = () => addQuestions.barsket();
-window.createAddedQestionsList = ()=> addQuestions.createAddedQestionsList();
-window.highlightNumber = ()=> addQuestions.highlightNumber();
+window.createAddedQestionsList = () => addQuestions.createAddedQestionsList();
+window.highlightNumber = () => addQuestions.highlightNumber();
+window.showSliderValue = () => settingsPage.showSliderValue();

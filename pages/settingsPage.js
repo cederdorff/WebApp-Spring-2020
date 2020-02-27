@@ -4,10 +4,9 @@ export default class SettingsPage {
   constructor() {
     // this.getThePartyId();
     this.template();
-    this.slider();
     // this.createPartyService = createPartyService;
     // this.partyId = "";
-
+    this.showSliderValue();
   }
 
   getThePartyId() {
@@ -36,7 +35,7 @@ export default class SettingsPage {
   
         <h1>Range Slider Picture</h1>
         <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange" oninput="showSliderValue()">
         <p>Value: <span id="demo"></span></p>
       </div>
 
@@ -45,14 +44,13 @@ export default class SettingsPage {
   }
 
 
-  slider() {
+  showSliderValue() {
     let slider = document.getElementById("myRange");
     let output = document.getElementById("demo");
     output.innerHTML = slider.value;
-
-    slider.oninput = function () {
-      output.innerHTML = this.value;
-    }
+    console.log(slider.value);
+    let bulletPosition = slider.value / slider.max;
+    output.style.left = bulletPosition * 578 + "px";
   }
 
   myFunction() {
@@ -70,22 +68,16 @@ export default class SettingsPage {
     }
     return result;
 
-  } }
-  
-
-  /*Slider med antal runder*/
-
-  let slider = document.getElementById("myRange");
- let output = document.getElementById("demo");
-  output.innerHTML = slider.value;
-  
-  slider.oninput = function() {
-    output.innerHTML = this.value;
   }
-  
+}
 
 
+/*Slider med antal runder*/
 
+// let slider = document.getElementById("myRange");
+// let output = document.getElementById("demo");
+// output.innerHTML = slider.value;
 
-
-    
+// slider.oninput = function () {
+//   output.innerHTML = this.value;
+// }
